@@ -8,8 +8,7 @@ int recursiveFactorial(int n) {  // recursive factorial function
     return n * recursiveFactorial(n - 1);  // recursive case
 }
 
-int tailRecursiveFactorial(
-    int n, int accumulator) { 
+int tailRecursiveFactorial(int n, int accumulator) {
   if (n == 0)
     return accumulator;
   else

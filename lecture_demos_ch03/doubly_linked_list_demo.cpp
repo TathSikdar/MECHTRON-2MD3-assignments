@@ -48,18 +48,15 @@ DLinkedList::~DLinkedList() {  // destructor
   delete trailer;
 }
 
-bool DLinkedList::empty() const  // is list empty?
-{
+bool DLinkedList::empty() const {  // is list empty?
   return (header->next == trailer);
 }
 
-const Elem& DLinkedList::front() const  // get front element
-{
+const Elem& DLinkedList::front() const {  // get front element
   return header->next->elem;
 }
 
-const Elem& DLinkedList::back() const  // get back element
-{
+const Elem& DLinkedList::back() const {  // get back element
   return trailer->prev->elem;
 }
 
@@ -72,13 +69,11 @@ void DLinkedList::add(DNode* x, const Elem& value) {
   x->next = newNode;
 }
 
-void DLinkedList::addFront(const Elem& e)  // add to front of list
-{
+void DLinkedList::addFront(const Elem& e) {  // add to front of list
   add(header, e);
 }
 
-void DLinkedList::addBack(const Elem& e)  // add to back of list
-{
+void DLinkedList::addBack(const Elem& e) {  // add to back of list
   add(trailer->prev, e);
 }
 
@@ -90,13 +85,11 @@ void DLinkedList::remove(DNode* v) {  // remove node v
   delete v;
 }
 
-void DLinkedList::removeFront()  // remove from font
-{
+void DLinkedList::removeFront() {  // remove from font
   remove(header->next);
 }
 
-void DLinkedList::removeBack()  // remove from back
-{
+void DLinkedList::removeBack() {  // remove from back
   remove(trailer->prev);
 }
 

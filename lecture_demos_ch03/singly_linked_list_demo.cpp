@@ -31,8 +31,7 @@ SLinkedList<E>::SLinkedList()  // constructor
     : head(NULL) {}
 
 template <typename E>
-bool SLinkedList<E>::empty() const  // is list empty?
-{
+bool SLinkedList<E>::empty() const {  // is list empty?
   return head == NULL;
 }
 
