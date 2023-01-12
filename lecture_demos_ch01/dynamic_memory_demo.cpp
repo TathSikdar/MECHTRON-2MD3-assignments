@@ -10,12 +10,12 @@ struct Passenger {
   MealType mealPref;        // meal preference
   bool isFreqFlyer;         // in the frequent flyer program?
   std::string freqFlyerNo;  // the passenger's freq. flyer number
-  double data[1000000];     // some arbitrary data
+  double data[10000000];    // some arbitrary data
 };
 
 int main() {
   while (true) {
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < 100000; i++) {
       Passenger *p = new Passenger;  // p points to the new Passenger
                                      // do stuff with p ...
                                      // delete p;
