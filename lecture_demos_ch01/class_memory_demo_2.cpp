@@ -20,15 +20,15 @@ class Vect {
 Vect::Vect(int n) {
   size = n;
   data = new double[n];  // allocate array
-}
+}    
 
-// copy constructor
+// copy constructor 
 Vect::Vect(const Vect &a) {
   size = a.size;                    // copy sizes​
-  data = new double[size];          // allocate new array​
+  data = new double[size];          // allocate new array​   
   for (int i = 0; i < size; i++) {  // copy the vector contents​
     data[i] = a.data[i];
-  }
+  } 
 }
 
 // assignment operator
@@ -57,13 +57,13 @@ int main() {
   Vect a(7);  // a is a vector of size 7
   a.fill(0.1);
   Vect b = a;  // initialize b from a (OK with assignment operator!)
-
+ 
   // print both Vect to check
   for (int i = 0; i < a.size; i++)
     std::cout << " a[" << i << "] is " << a.data[i] << " b[" << i << "] is "
               << b.data[i] << std::endl;
   std::cout << std::endl;
-
+            
   Vect c(3);  // c is a vector with size 10
   c = a;      // assign a to c (OK because assigment operator will resize!)
 
