@@ -28,6 +28,7 @@ int main() {
   p1->name = "Wyatt";
   p1->isFreqFlyer = true;
   p1->freqFlyerNo = 1;
+  
   Passenger *p2 = new Passenger;
   p2->name = "Gomer";
   p2->isFreqFlyer = true;

@@ -9,7 +9,6 @@ class BasicVector {  // a simple vector class
   {
     return a[i];
   }
-  // ... other public members omitted
  private:
   T *a;          // array storing the elements
   int capacity;  // length of array a
