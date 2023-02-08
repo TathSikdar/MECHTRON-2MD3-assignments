@@ -1,19 +1,24 @@
 #include <cstdlib>
 #include <iostream>
 
+double** array(){
+    double** dp = new double*[10]; // allocate memory for 10 double pointers
+
+    // sets all indexes of dp
+    for(int i =0; i<10; i++){
+        double* n = new double; // allocate memory for double
+        *n = 0.0; // set value of double
+        dp[i] = n; // assign each index
+    }
+    return dp;
+}
+
 int main(){
-    double* dp = new double[10]; // allocate memory for array of 10 elements
-
-    // replace all elements with 0.0
-    for(int i =0; i<10; i++){ 
-        dp[i]=0.0;
-    }
-
-    // prints list
-    std::cout<<"index: value"<<std::endl<<"------------"<<std::endl;
-    for(int i=0; i<10; i++){
-        std::cout<<i<<": "<<std::to_string(*dp)<<std::endl;
-    }
+    
+    double** list = array();
+    for(int i=0; i<10; i++)
+        std::cout<<(list[i])<<'\n';
+    
 
     return EXIT_SUCCESS;
 }

@@ -22,24 +22,23 @@ bool compareBirthdays(const int* birthdays, const int& n){
     return false; // matching birthdays not found
 }
 
-void experiment(const int& n){
-    srand(time(0));
-    int counter = 0;
-    for(int i=0; i<100; i++){
-        int* birthdays = makeBirthdays(n);
-        counter+=compareBirthdays(birthdays,n);
+void experiment(){
+    for (int n = 5; n <= 100; n+=5){
+        srand(time(0));
+        int counter = 0;
+        for(int i=0; i<100; i++){
+            int* birthdays = makeBirthdays(n);
+            counter+=compareBirthdays(birthdays,n);
+            delete(birthdays);
+        }
+        std::cout<<n<<","<<counter<<","<<counter/100.0<<std::endl;
     }
-    std::cout<<n<<","<<counter<<","<<counter/100.0<<std::endl;
 }
 
 
 
 int main(){
-    for (int i = 5; i <= 100; i+=5)
-    {
-        experiment(i);
-    }
-    
+        experiment();    
 
     return EXIT_SUCCESS;
 }

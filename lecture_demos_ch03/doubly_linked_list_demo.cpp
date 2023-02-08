@@ -5,7 +5,7 @@ typedef std::string Elem;
 
 class DNode {  // doubly linked list node
  private:
-  Elem elem;                 // node element value
+  Elem name;                 // node element value
   DNode* prev;               // previous node in list
   DNode* next;               // next node in list
   friend class DLinkedList;  // allow DLinkedList access
@@ -53,16 +53,16 @@ bool DLinkedList::empty() const {  // is list empty?
 }
 
 const Elem& DLinkedList::front() const {  // get front element
-  return header->next->elem;
+  return header->next->name;
 }
 
 const Elem& DLinkedList::back() const {  // get back element
-  return trailer->prev->elem;
+  return trailer->prev->name;
 }
 
 void DLinkedList::add(DNode* x, const Elem& value) {
   DNode* newNode = new DNode;
-  newNode->elem = value;
+  newNode->name = value;
   newNode->next = x->next;
   newNode->prev = x;
   x->next->prev = newNode;
